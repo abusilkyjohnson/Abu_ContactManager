@@ -23,7 +23,6 @@ public abstract class ContactDataBase extends RoomDatabase {
 
             dbInstance = Room.databaseBuilder(context.getApplicationContext(),
                                                 ContactDataBase.class,"contact_db").fallbackToDestructiveMigration().build();
-
         }
         return dbInstance;
     }
