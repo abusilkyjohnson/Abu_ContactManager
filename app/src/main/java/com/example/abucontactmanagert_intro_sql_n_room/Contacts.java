@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
-//This @ means EntityAn entity is a fundamental component that represents a table in the SQLite database.
+//E: TEntityAn entity is a fundamental component that represents a table in the SQLite database.
 //Each entity class corresponds to one table and the fields properties or the variables within the entity
 //class represent INT columns in that table.
 //Entities define the structure and the schema of your database tables.
