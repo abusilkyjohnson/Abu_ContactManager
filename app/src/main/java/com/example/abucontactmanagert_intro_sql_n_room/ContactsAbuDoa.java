@@ -1,6 +1,7 @@
 package com.example.abucontactmanagert_intro_sql_n_room;
 
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -21,5 +22,5 @@ public interface ContactsAbuDoa {
     //the query annotation allows you to define custom SQL queries and map the results to Java or Kotlin
     //objects.and the query annotation allows you to define custom SQL queries and map the results to Java or Kotlin
     @Query("SELECT * FROM contactsAbu_Table")
-    List<Contacts> AbuGetAllContacts();
+    LiveData<List<Contacts>> AbuGetAllContacts();
 }

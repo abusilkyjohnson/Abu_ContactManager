@@ -51,6 +51,7 @@ public class AbuRepo {
 
     public List<Contacts> GetAllContacts()
     {
+        //need to use livedata here to provide data to the UI
         return  contactsAbuDoa.AbuGetAllContacts();
     }
 }
