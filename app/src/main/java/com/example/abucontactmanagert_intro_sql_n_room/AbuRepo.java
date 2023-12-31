@@ -1,7 +1,10 @@
 package com.example.abucontactmanagert_intro_sql_n_room;
 
+import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
+
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -12,8 +15,10 @@ public class AbuRepo {
     private final ContactsAbuDoa contactsAbuDoa;
     ExecutorService executorService;
     Handler handler;
-    public AbuRepo(ContactsAbuDoa contactsAbuDoa) {
-        this.contactsAbuDoa = contactsAbuDoa;
+    public AbuRepo(Application application) {
+
+        ContactDataBase contactDataBase = ContactDataBase.GetInstance(application);
+        this.contactsAbuDoa = contactDataBase.GetContactDAO();
         //Used backg database operation ensures order
         executorService= Executors.newSingleThreadExecutor();
 
@@ -49,7 +54,7 @@ public class AbuRepo {
         });
     }
 
-    public List<Contacts> GetAllContacts()
+    public LiveData<List<Contacts>> GetAllContacts()
     {
         //need to use livedata here to provide data to the UI
         return  contactsAbuDoa.AbuGetAllContacts();
