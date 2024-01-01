@@ -25,7 +25,7 @@ public class Contacts{
     private String _name;
     private String _email;
 
-    public Contacts(int _id, String _name, String _email) {
+    public Contacts(String _name, String _email) {
         this._id = _id;
         this._name = _name;
         this._email = _email;
