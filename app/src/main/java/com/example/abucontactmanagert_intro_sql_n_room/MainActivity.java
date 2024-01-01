@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Data Source
     private ContactDataBase contactDatabase;
-    private ArrayList<Contacts> contacts = new ArrayList<>();
+    private ArrayList<Contacts> contactsArrayList = new ArrayList<>();
 
     //Adapter
     private AbuAdapter abuAdapter;
@@ -44,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        //Adapter
-        abuAdapter = new AbuAdapter(contacts);
-
         //Database
         contactDatabase = ContactDataBase.GetInstance(this);
 
@@ -63,10 +60,19 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(List<Contacts> contacts) {
                 for (Contacts c: contacts)//for each loop
                 {
+                    //we had to change the list up top to specifcy arraylist because of the conflict variable
+                    //name in this parameter
                     Log.v("Tagy",c.get_name());
+                    contactsArrayList.add(c);
+
                 }
+                abuAdapter.notifyDataSetChanged();
             }
         });
+
+        //Adapter
+        abuAdapter = new AbuAdapter(contactsArrayList);
+
 
         //Linking the RecyclerView with the Adapter
         recyclerView.setAdapter(abuAdapter);
