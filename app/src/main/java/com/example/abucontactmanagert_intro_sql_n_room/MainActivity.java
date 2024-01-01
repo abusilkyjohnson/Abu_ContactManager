@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel.GetAllContact().observe(this, new Observer<List<Contacts>>() {
             @Override
             public void onChanged(List<Contacts> contacts) {
+
+                contactsArrayList.clear();//we need this so we clear the array list
                 for (Contacts c: contacts)//for each loop
                 {
                     //we had to change the list up top to specifcy arraylist because of the conflict variable
