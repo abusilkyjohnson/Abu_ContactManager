@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Inserting a new contact for example reason
         Contacts c1 = new Contacts(1,"Abu","Siklyjohnson@gmail.com");
-        viewModel.AddContact(c1);//we work directly with the viewmodel
+        viewModel.AddContact(c1);//we work directly with the viewmodel/
 
         //Loading the Data from ROOM db
         viewModel.GetAllContact().observe(this, new Observer<List<Contacts>>() {
