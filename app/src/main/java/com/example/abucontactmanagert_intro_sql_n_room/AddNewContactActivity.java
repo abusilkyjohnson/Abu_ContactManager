@@ -11,7 +11,7 @@ public class AddNewContactActivity extends AppCompatActivity {
 
     private ActivityAddNewContactBinding binding;
     private AddNew_Activity_ClickHandler handler;
-    Contacts contacts;
+    private Contacts contacts;
 
 
     @Override
