@@ -7,7 +7,12 @@
     <data>
         <variable
             name="contact"
-            type="com.example.abucontactmanagert_intro_sql_n_room.Contacts"
+            type="com.example.abucontactmanagert_intro_sql_n_room.Contacts"/>
+        
+        <variable
+            name="abuClickHandler"
+            type="com.example.abucontactmanagert_intro_sql_n_room.AddNew_Activity_ClickHandler" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +23,7 @@
         tools:context=".AddNewContactActivity">
 
         <EditText
+            android:text="@={contact._name}"
             android:id="@+id/editTextName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -29,6 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:text="@{contact._email}"
             android:id="@+id/editTextEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -38,6 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
         <Button
+            android:onClick="@{abuClickHandler::onAddContactSubmitButt}"
             android:id="@+id/addContactRoomDBButt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
