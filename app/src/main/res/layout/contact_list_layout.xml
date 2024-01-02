@@ -8,6 +8,17 @@
             name="contact"
             type="com.example.abucontactmanagert_intro_sql_n_room.Contacts" />
     </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_margin="16dp"
         android:layout_width="match_parent"
@@ -37,5 +48,8 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </layout>
