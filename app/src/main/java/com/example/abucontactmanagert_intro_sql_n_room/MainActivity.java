@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         ContactAppViewModel viewModel = new ViewModelProvider(this).get(ContactAppViewModel.class);
 
         //Inserting a new contact for example reason
-        /////////////////////////////made this edit abu to see if it stops adding you each time///////////////////Contacts c1 = new Contacts("Abu","Siklyjohnson@gmail.com");
+        /////////////////////////////made this commented to stop recreation of abu///////////////////Contacts c1 = new Contacts("Abu","Siklyjohnson@gmail.com");
         ////////////////////////////////////////////////viewModel.AddContact(c1);//we work directly with the viewmodel/
 
         //Loading the Data from ROOM db
